@@ -1,5 +1,7 @@
 <html>
 <head>
     <title>{{ .Title }}</title>
+    {{ $style := resources.Get "sass/main.scss" | toCSS }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 </head>
 <body>
