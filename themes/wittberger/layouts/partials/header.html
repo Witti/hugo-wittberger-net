@@ -1,7 +1,8 @@
 <html>
 <head>
     <title>{{ .Title }}</title>
-    {{ $style := resources.Get "sass/main.scss" | toCSS }}
-    <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+    {{ $options := (dict "outputStyle" "compressed" "enableSourceMap" true ) }}
+    {{ $style := resources.Get "sass/main.scss" | toCSS $options | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}" >
 </head>
 <body>
