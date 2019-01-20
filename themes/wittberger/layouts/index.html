@@ -14,4 +14,11 @@
     {{ end }}
   {{ end }}
 
+  <h1>projects</h1>
+  {{ range .Data.Pages }}
+    {{ if or (eq .Type "project") (eq .Type "firstproject") }}
+        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+    {{ end }}
+  {{ end }}
+
 {{ partial "footer.html" . }}
