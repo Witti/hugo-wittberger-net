@@ -1,0 +1,10 @@
+baseURL: /
+title: "wittberger.net - Daniel Wittberger"
+defaultContentLanguage: de
+languages:
+  de:
+    lang: de
+    languageName: Deutsch
+    weight: 1
+MetaDataFormat: "yaml"
+theme: "wittberger"
