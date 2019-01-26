@@ -2,11 +2,11 @@
 title: "Printserver inklusive Airprint mit dem RaspberryPi"
 date: 2017-06-04T21:07:38+01:00
 Description: ""
+coverimage: "images/rpicupstut.jpg"
+coverimageposition: "top"
 Tags: ['rpi','airprint','hardware','apple']
 Categories: ['raspberrypi','home-projects']
-
 ---
-
 
 ### Voraussetzungen
 Folgende Dinge setze ich für die erfolgreiche Durchführung voraus:
