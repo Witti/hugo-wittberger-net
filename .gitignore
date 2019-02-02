@@ -2,3 +2,11 @@ public/
 _gen/
 node_modules/
 package-lock.json
+.idea/modules.xml
+.idea/vcs.xml
+.idea/watcherTasks.xml
+.idea/wittberger.iml
+.idea/workspace.xml
+.idea/misc.xml
+.idea/encodings.xml
+.idea/*
