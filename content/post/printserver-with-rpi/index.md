@@ -11,7 +11,7 @@ Categories: ['raspberrypi','home-projects']
 ### Voraussetzungen
 Folgende Dinge setze ich für die erfolgreiche Durchführung voraus:
 
-* einen [RaspberryPi Model B](http://www.amazon.de/gp/product/B008PT4GGC/ref=as_li_ss_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=B008PT4GGC&linkCode=as2&tag=witstri-21) (Model A sollte genauso funktionieren)
+* einen [RaspberryPi Model B](https://amzn.to/2S4Utw6) (Model A sollte genauso funktionieren)
 * eine frische Installation von Raspbian ([Details gibt es hier](http://www.RaspberryPi.org/help/noobs-setup))
 * funktionierende Netzwerkverbindung
 * Maus/Tastatur/Bildschirm-Verbindung (SSH geht natürlich auch)
@@ -95,14 +95,14 @@ Es sollte eine kurze Zertifikats-Warnung kommen die bestätigt werden muss.
 
 Nun sollte das Admin-Interface von Cups in voller Pracht im Browser erscheinen.
 
-![Cups Admin Interface](https://dl.dropboxusercontent.com/u/70705/wittistribune-files/cups_screenshot.png)
+![Cups Admin Interface](images/cups_screenshot.png)
 
 Unter dem Menüpunkt "Verwaltung" befindet sich die Verwaltung von Cups und der verfügbaren Drucker. 
 Diese Verwaltung ist grundsätzlich komplett selbsterklärend. Mit einem Klick auf "Drucker hinzufügen" kann der angeschlossene USB-Drucker zu Cups hinzugefügt werden. Dort sollte unbedingt auf die Wahl des richtigen Modells geachtet werden damit der Drucker korrekt angesprochen werden kann und das beste Druckergebniss erreicht wird. 
 
 Beim Klick auf Drucker-Hinzufügen fordert Cups uns auf Username und Passwort einzugeben. Hier nutzen wir unseren User "pi" den wir zuvor zur entsprechenden Gruppe hinzugefügt haben. 
 
-![Cups Admin-Interface - Drucker hinzufügen](https://dl.dropboxusercontent.com/u/70705/wittistribune-files/cups_add_printer.png)
+![Cups Admin-Interface - Drucker hinzufügen](images/cups_add_printer.png)
 
 Bei meinem Drucker - Samsung ML-2510 - funktionierte die Integration in Cups ohne Probleme.
 Nachdem der Drucker zu Cups hinzugefügt wurde sollte dieser auch schon auf allen Geräten im Netzwerk verfügbar sein. Selbiges gilt für iOS-Devices. 
