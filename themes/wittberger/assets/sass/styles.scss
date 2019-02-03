@@ -1,8 +1,6 @@
 .coverimage {
     display: block;
     width: 100%;
-    margin-top: 1em;
-    margin-bottom: 1em;
     max-height: 35%;
 }
 
@@ -27,6 +25,11 @@ h1 {
     .pull-up {
         margin-top: -10%;
     }
+}
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .post-content {

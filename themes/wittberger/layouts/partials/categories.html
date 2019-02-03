@@ -1,0 +1,13 @@
+{{ $taxonomy := "categories" }}
+{{ with .Param $taxonomy }}
+<ul>
+    {{ range $index, $category := . }}
+        {{ $categoryslug := lower $category }}
+        {{ with $.Site.GetPage (printf "/%s/%s" $taxonomy $categoryslug) -}}
+            <li>
+                <a href="{{ .Permalink }}">{{ $category }}</a>
+            </li>
+        {{- end -}}
+    {{- end -}}
+</ul>
+{{ end }}

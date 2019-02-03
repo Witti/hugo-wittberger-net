@@ -1,7 +1,8 @@
 ---
 title: "Starbound Server Bei Digitalocean"
 date: 2019-01-25T21:42:09+01:00
-draft: false
+tags: ["games","digitalocean","howto"]
+categories: ['HowTo', 'DigitalOcean']
 ---
 
 Das vor kurzem erschienene Spiel Starbound befindet sich zwar noch in Entwicklung aber trotzdem ist es bereits möglich, einen eigenen Multiplayer-Server aufzusetzen. Wir wollen dies anhand dieser kleinen Anleitung bei [DigitalOcean](https://www.digitalocean.com/?refcode=2fa486f567f5)  praktisch umsetzen. 

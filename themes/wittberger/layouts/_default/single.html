@@ -1,20 +1,18 @@
 {{ partial "header.html" . }}
 
 {{ if .Params.coverimage }}
-<div class="container-fluid">
-    <div class="row">
-        <div class="col">
-            <img class="coverimage" src="{{ .Params.coverimage }}" />
-        </div>
-    </div>
+<div class="container-fluid no-gutters">
+    <img class="coverimage" src="{{ .Params.coverimage }}" />
 </div>
 {{ end }}
 
-<div class="container pull-up">
+<div class="container {{ if .Params.coverimage }}pull-up{{ end }}">
     <div class="row">
         <div class="col-md-4 content-container">
             <h1>{{ .Title }}</h1>
-            <h2>{{ partial "dates.html" . }}</h2>
+            <div class="meta">{{ partial "dates.html" . }}</div>
+            <div class="categories">{{ partial "categories.html" . }}</div>
+            <div class="similar">{{ partial "similar.html" . }}</div>
         </div>
         <div class="col-md-8 post-content content-container">
             {{ .Content }}

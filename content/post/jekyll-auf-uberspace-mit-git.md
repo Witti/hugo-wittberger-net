@@ -2,18 +2,17 @@
 title: "Jekyll Auf Uberspace Mit Git"
 date: 2019-01-25T21:57:27+01:00
 Description: ""
-Tags: []
-Categories: []
-
+tags: ["git","staticsite","uberspace"]
+categories: ['Uberspace','HowTo']
 ---
 
 Diese kleine Anleitung beschreibt die Verwendung von Jekyll mit Hilfe von Git auf einem uberspace.de Account. 
 
-###Ruby und Gems vorbereiten (uberspace)
+### Ruby und Gems vorbereiten (uberspace)
 
 Falls du auf deinem uberspace.de Account noch kein Ruby eingerichtet hast solltest du dies zuerst mal erledigen. Jekyll benötigt eine Ruby-Version von 1.9 oder höher. 
 
-###Hier nun Schritt für Schritt die Anleitung wie dies erfolgt. (Für diese Schritte setze ich einen "jungfräulichen" uberspace-Account voraus)
+### Hier nun Schritt für Schritt die Anleitung wie dies erfolgt. (Für diese Schritte setze ich einen "jungfräulichen" uberspace-Account voraus)
 
 	[helga@helium ~]$ cat <<'__EOF__' >> ~/.bash_profile
 	export PATH=/package/host/localhost/ruby-2.0.0/bin:$PATH
@@ -36,7 +35,7 @@ Damit steht der Installation von Jekyll nichts mehr im Wege und wir erledigen di
 	
 Nach einer kurzen Wartezeit ist nun auch Jekyll für die spätere Verwendung installiert. 
 
-###Jekyll auf dem lokalen System installieren
+### Jekyll auf dem lokalen System installieren
 
 Hier wird es etwas schwierig für mich eine Anleitung anzubieten da es einfach zu viele unterschiedliche Systeme gibt auf denen Ruby und Jekyll laufen kann. Um dies trotzdem in einer vernünftigen Form anzubieten behelfe ich mich der alten Internet-Technik und zwar der Hyperlinks :-D
 
@@ -46,12 +45,12 @@ Hier nun ein paar Links zu entsprechenden Anleitungen:
 * [Jekyll auf Windows - nicht getestet, weil kein Windows-System vorhanden](http://bryanwweber.com/2013/07/installing-jekyll-on-windows/)
 
 
-###Git auf dem lokalen System installieren
+### Git auf dem lokalen System installieren
 Falls dein lokales System noch über keine Git-Installation verfügt solltest du dies noch schnell nachholen. Wie auch bereits bei dem Punkt darüber behelfe ich hier mir mit einer Verlinkung :-)
 
 * [Anleitungen und Downloads von Git für die gängigen Plattformen](http://git-scm.com)
 
-###Jekyll auf dem lokalen System vorbereiten
+### Jekyll auf dem lokalen System vorbereiten
 
 Ist nun Jekyll und Git auf dem eigenen System installiert können wir mit der Erstellung unseres ersten Jekyll-Blogs fortfahren. Hier die wichtigsten Basics um ein Jekyll-Blog am eigenen System zu erstellen:
 
@@ -87,7 +86,7 @@ Nun kommen wir zurück zu Git. Um unser Jekyll-Blog später mit Hilfe von Git ve
 
 Mit den letzten 3 Kommandos ist die Arbeit auf unserem lokalen System nahezu erledigt. Jetzt müssen wir aber erstmal auf unserem uberspace-Account noch ein paar Dinge erledigen. 
 
-###Git-Repository auf dem uberspace-Account vorbereiten
+### Git-Repository auf dem uberspace-Account vorbereiten
 
 Für unser neues Jekyll-Blog brauchen wir jetzt auf dem uberspace-Account eine Gegenstelle sprich ein Git-Repository. Dazu wechseln wir mit Hilfe von 
 
@@ -133,7 +132,7 @@ Jetzt müssen wir das neu erstellte Script nur mehr ausführbar machen, dies erl
 
 Somit sind nun alle Schritte auf der Seite unseres uberspace.de Accounts erledigt und wir kehren wieder zurück zu unserem Arbeitsrechner. 
 
-###uberspace-Account als Remote eintragen und pushen
+### uberspace-Account als Remote eintragen und pushen
 
 Damit unsere Blog-Einträge und Änderungen auch auf dem Server landen müssen wir unsere frisch erstellte Git-Gegenstelle noch bei unserem lokalen Git-Repository als "Remote" hinterlegen. 
 
@@ -149,7 +148,7 @@ Nun ist der Zeitpunkt gekommen und wir starten die Veröffentlichung unseres Jek
 
 Mit Hilfe dieses Kommandos werden alle Änderungen am Jekyll-Blog zum uberspace-Account übertragen und dort durch das post-receive-Script verarbeitet. Ist diese Verarbeitung abgeschlossen sollte dein Jekyll-Blog online sein. 
 
-###Fertig
+### Fertig
 
 Ich hoffe du hast alles verstanden und dein Jekyll-Blog ist nun online. Hast du noch Fragen dann poste Sie einfach als Kommentar und ich werde versuchen dir zu helfen. 
 

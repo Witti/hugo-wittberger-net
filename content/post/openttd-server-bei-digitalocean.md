@@ -2,19 +2,19 @@
 title: "Openttd Server Bei Digitalocean"
 date: 2019-01-25T21:56:46+01:00
 Description: ""
-Tags: []
-Categories: []
+tags: ["games","digitalocean","howto"]
+categories: ['HowTo', 'DigitalOcean']
 
 ---
 
-###Starten des Droplets
+### Starten des Droplets
 Für unseren OpenTTD-Server benötigen wir keinen sonderlich leistungsstarken Server. Ein 512MB-Ubuntu-13.10-Droplet reicht für den Anfang vollkommen aus. Dieses starten wir über das Backend von Digital-Ocean.
 Ist das Droplet erstmal gestartet, suchen wir uns die zugewiesene IP-Adresse raus und loggen uns mit
 	ssh root@111.111.111.111
 ein.
 _(111.111.111.111 bitte durch die korrekte IP des droplets ersetzen ;-D)_
 
-###Droplet einrichten
+### Droplet einrichten
 Bevor wir mit der Einrichtung des OpenTTD-Servers beginnen können, müssen wir vorher ein paar Schritte durchführen.
 
 Erstmal bringen wir die Software des Servers auf den neusten Stand. Dies erfolgt mit Hilfe von apt-get:
@@ -32,7 +32,7 @@ Damit unser OpenTTD-Server später nicht mit root-Rechten unterwegs ist, legen w
 	adduser openttd
 _Anmerkung: Der User muss nicht zwingend "openttd" heißen._
 
-###Installation des OpenTTD-Servers
+### Installation des OpenTTD-Servers
 Jetzt da unser Droplet fertig eingerichtet ist, besorgen wir uns die neuste Version von OpenTTD. Dies erfolgt über die [Webseite von OpenTTD](http://www.openttd.org/en/download-stable).
 
 Mit Hilfe von `wget` übertragen wir das OpenTTD-Paket auf unser Droplet:
@@ -46,7 +46,7 @@ Dies wird jedoch wegen fehlender Abhängigkeiten nicht funktionieren. Kein Probl
 	apt-get -f install -y
 Und schon ist OpenTTD installiert.
 
-###Einrichten des OpenTTD-Servers
+### Einrichten des OpenTTD-Servers
 Um mit der Einrichtung der Server-Software für OpenTTD fortzufahren, loggen wir uns aus (`exit`) und erneut mit unserem openttd-User ein:
 	ssh openttd@111.111.111.111
 _Anmerkung: Bitte hier den User ("openttd") abändern falls ein anderer Username verwendet wurde und auch wieder die korrekte IP verwenden ;-)_
@@ -58,7 +58,7 @@ eingeben.
 Aus irgendeinem unerfindlichen Grund meckert OpenTTD nun, dass kein Grafik-Paket installiert ist. Grafik-Paket .... auf einer Konsole für einen Server? O_O
 Nun gut, tun wir unserer kleinen "Transport-Diva" den gefallen und installieren wir das Grafik-Paket.
 
-###Grafik-Paket installieren
+### Grafik-Paket installieren
 Als erstes besorgen wir uns über die Webseite die aktuelle Version des "OpenGFX" Grafik-Pakets. Die Webseite findet ihr [hier](http://dev.openttdcoop.org/projects/opengfx).
 
 Wieder mit der Hilfe von wget laden wir das Grafik-Paket auf unser Droplet:
@@ -76,7 +76,7 @@ Danach räumen wir noch mit
 	rm -rvf opengfx-0.4.7*
 hinter uns auf.
 
-###OpenTTD-Server starten (jetzt aber wirklich)
+### OpenTTD-Server starten (jetzt aber wirklich)
 Nun starten wir unsern Server erneut:
 	openttd -D
 
@@ -93,13 +93,13 @@ Mit dem Kommando
 	screen -r
 können wir uns wieder Zugriff auf die Admin-Konsole von OpenTTD verschaffen.
 
-###Weitere Einrichtung und Anpassungen
+### Weitere Einrichtung und Anpassungen
 Um unseren Server anzupassen und zu gestalten bietet OpenTTD eine Vielfalt an Optionen innerhalb der Konfigurations-Datei.
 Diese ist im Heimat-Ordner unseres openttd-Users unter .openttd zu finden.
 
 Alle möglichen Optionen und deren Bedeutung findet ihr in der OpenTTD-Wiki unter [http://wiki.openttd.org/Openttd.cfg](http://wiki.openttd.org/Openttd.cfg).
 
-###Unterstützung
+### Unterstützung
 Sollte das Tutorial hilfreich gewesen sein und die Entscheidung für einen [DigitalOcean](https://www.digitalocean.com/?refcode=2fa486f567f5)-Account gefallen sein dann wäre es toll wenn ihr dafür meine Links zu [DigitalOcean](https://www.digitalocean.com/?refcode=2fa486f567f5) verwendet.
 
 _Bildquelle: [OpenTTD - eigener Screenshot](http://www.openttd.org)_

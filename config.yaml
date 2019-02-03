@@ -6,5 +6,8 @@ languages:
     lang: de
     languageName: Deutsch
     weight: 1
+taxonomies:
+  category: categories
+  tag: tags
 MetaDataFormat: "yaml"
 theme: "wittberger"
