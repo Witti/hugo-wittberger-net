@@ -1,6 +1,6 @@
 {{ $taxonomy := "categories" }}
 {{ with .Param $taxonomy }}
-<ul>
+<ul class="inline-list">
     {{ range $index, $category := . }}
         {{ $categoryslug := lower $category }}
         {{ with $.Site.GetPage (printf "/%s/%s" $taxonomy $categoryslug) -}}

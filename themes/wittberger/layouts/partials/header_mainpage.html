@@ -1,12 +1,10 @@
-<!DOCTYPE html>
 <html>
 <head>
-    <title>{{ .Title }} | wittberger.net</title>
+    <title>{{ .Title }}</title>
     {{ $options := (dict "outputStyle" "compressed" "enableSourceMap" true ) }}
     {{ $style := resources.Get "sass/main.scss" | toCSS $options | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}" >
 </head>
 <body>
-    <header>
-        {{ partial "head.html" . }}
-    </header>
+
+{{ partial "head_mainpage.html" . }}

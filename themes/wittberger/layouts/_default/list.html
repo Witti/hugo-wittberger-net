@@ -1,8 +1,13 @@
-<!DOCTYPE html>
-<html>
-<body>
-  {{ range .Data.Pages }}
-    <h1><a href={{ .Permalink }}>{{ .Title }}</a></h1>
-  {{ end }}
-</body>
-</html>
+{{ partial "header.html" . }}
+
+<div class="container {{ if .Params.coverimage }}pull-up{{ end }}">
+  <div class="row">
+    <div class="col-md-12 content-container">
+      {{ range .Data.Pages }}
+      <h3><a href={{ .Permalink }}>{{ .Title }}</a></h3>
+      {{ end }}
+    </div>
+  </div>
+</div>
+
+{{ partial "footer.html" . }}

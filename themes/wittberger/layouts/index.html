@@ -1,30 +1,31 @@
-{{ partial "header.html" . }}
+{{ partial "header_mainpage.html" . }}
 
 <div class="container">
-  <div class="row">
-      <div class="col-12">
-        <h1>Aktuelle Posts</h1>
-        {{ range first 10 .Data.Pages }}
-          {{ if eq .Type "post"}}
-            <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-          {{ end }}
-        {{ end }}
-    </div>
+  <div class="col">
+    <img src="/images/esel.svg" class="mx-auto d-block w-25 mt-4 mb-4">
   </div>
 </div>
 
-  <!--<h1>pages</h1>
-  {{ range .Data.Pages }}
-    {{ if or (eq .Type "page") (eq .Type "about") }}
-      <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-    {{ end }}
-  {{ end }}
+<div class="container">
+  <div class="row">
+      <div class="col">
+        <h2>Aktuelle Posts</h2>
+        {{ range first 10 .Data.Pages }}
+          {{ if eq .Type "post"}}
+            <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+          {{ end }}
+        {{ end }}
+    </div>
 
-  <h1>projects</h1>
-  {{ range .Data.Pages }}
-    {{ if or (eq .Type "project") (eq .Type "firstproject") }}
-        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-    {{ end }}
-  {{ end }}-->
+    <div class="col">
+      <h2>Aktuelle Projekte</h2>
+      {{ range .Data.Pages }}
+        {{ if or (eq .Type "project") }}
+          <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+</div>
 
 {{ partial "footer.html" . }}
