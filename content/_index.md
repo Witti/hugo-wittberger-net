@@ -1,3 +1,9 @@
+---
+title: "wittberger.net"
+description: "willkommen auf wittberger.net"
+date: "2018-02-15"
+---
+
 ## Hi! 👋
 
 Mein name ist Daniel Wittberger, ich bin Backend-Webdeveloper aus Österreich. 
