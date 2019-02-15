@@ -1,7 +1,8 @@
 ---
 title: "Jekyll Auf Uberspace Mit Git"
-date: 2019-01-25T21:57:27+01:00
+date: 2013-12-05
 Description: ""
+coverimage: "images/jekyll_postimage.jpg"
 tags: ["git","staticsite","uberspace"]
 categories: ['Uberspace','HowTo']
 ---

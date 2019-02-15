@@ -1,6 +1,6 @@
 ---
 title: "Printserver inklusive Airprint mit dem RaspberryPi"
-date: 2017-06-04T21:07:38+01:00
+date: 2014-06-03
 Description: ""
 coverimage: "images/rpicupstut.jpg"
 squareimage: "images/rpicupstut_square.jpg"

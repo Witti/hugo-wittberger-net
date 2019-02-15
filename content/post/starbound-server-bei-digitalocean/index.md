@@ -1,6 +1,7 @@
 ---
 title: "Starbound Server Bei Digitalocean"
-date: 2019-01-25T21:42:09+01:00
+date: 2013-12-13
+coverimage: "images/postimg_starbound_do.jpg"
 tags: ["games","digitalocean","howto"]
 categories: ['HowTo', 'DigitalOcean']
 ---

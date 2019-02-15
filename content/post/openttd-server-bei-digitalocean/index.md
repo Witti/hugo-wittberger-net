@@ -1,7 +1,8 @@
 ---
 title: "Openttd Server Bei Digitalocean"
-date: 2019-01-25T21:56:46+01:00
+date: 2013-12-08
 Description: ""
+coverimage: "images/openttd_do_postimg.jpg"
 tags: ["games","digitalocean","howto"]
 categories: ['HowTo', 'DigitalOcean']
 
