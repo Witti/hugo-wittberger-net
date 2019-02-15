@@ -1,8 +1,4 @@
----
-title: "Über"
-description: "about this blog"
-date: "2018-02-15"
----
+## Hi! 👋
 
 Mein name ist Daniel Wittberger, ich bin Backend-Webdeveloper aus Österreich. 
 

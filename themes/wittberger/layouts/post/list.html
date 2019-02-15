@@ -1,18 +1,16 @@
 {{ partial "header.html" . }}
 
-{{ if .Params.coverimage }}
-<div class="container-fluid no-gutters">
-    <img class="coverimage" src="{{ .Params.coverimage }}" />
-</div>
-{{ end }}
-
 <div class="container {{ if .Params.coverimage }}pull-up{{ end }}">
     <div class="row">
         <div class="col-md-4 content-container">
-            <h1>{{ .Title }}</h1>
+            <h1>Aktuelle Posts</h1>
         </div>
         <div class="col-md-8 post-content content-container">
-            {{ .Content }}
+            <ul class="post-list-with-details">
+                {{ range .Data.Pages }}
+                <li><a href={{ .Permalink }}>{{ .Title }}</a> <small>{{ partial "dates.html" . }}</small></li>
+                {{ end }}
+            </ul>
         </div>
     </div>
 </div>

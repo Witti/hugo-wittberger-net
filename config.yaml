@@ -11,3 +11,6 @@ taxonomies:
   tag: tags
 MetaDataFormat: "yaml"
 theme: "wittberger"
+blackfriday:
+   plainIDAnchors: true
+   hrefTargetBlank: true
