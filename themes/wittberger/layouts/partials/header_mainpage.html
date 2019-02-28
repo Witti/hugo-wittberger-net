@@ -7,8 +7,10 @@
     {{ $options := (dict "outputStyle" "compressed" "enableSourceMap" true ) }}
     {{ $style := resources.Get "sass/main.scss" | toCSS $options | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}" >
+    {{ partial "tagmanager_header.html" }}
 </head>
 <body>
+{{ partial "tagmanager_body.html" }}
 
 {{ partial "head_mainpage.html" . }}
 
