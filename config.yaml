@@ -12,5 +12,26 @@ taxonomies:
 MetaDataFormat: "yaml"
 theme: "wittberger"
 blackfriday:
-   plainIDAnchors: true
-   hrefTargetBlank: true
+  plainIDAnchors: true
+  hrefTargetBlank: true
+privacy:
+  disqus:
+    disable: false
+  googleAnalytics:
+    anonymizeIP: false
+    disable: false
+    respectDoNotTrack: false
+    useSessionStorage: false
+  instagram:
+    disable: false
+    simple: false
+  twitter:
+    disable: false
+    enableDNT: false
+    simple: false
+  vimeo:
+    disable: false
+    simple: false
+  youtube:
+    disable: false
+    privacyEnhanced: false
