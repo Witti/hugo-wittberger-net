@@ -1,7 +1,6 @@
 public/
 _gen/
 node_modules/
-package-lock.json
 .idea/modules.xml
 .idea/vcs.xml
 .idea/watcherTasks.xml
