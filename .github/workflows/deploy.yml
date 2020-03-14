@@ -27,7 +27,7 @@ jobs:
       - name: rsync deploy
         uses: burnett01/rsync-deployments@4.0
         with:
-          switches: -vr --delete
+          switches: -vr --delete --chown=webdeploy:http
           path: public/
           remote_path: /var/www/wittberger.net-gh
           remote_host: vps.wittberger.net
