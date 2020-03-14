@@ -17,9 +17,11 @@
       <div class="col-md-6">
         <h2>Letzte Posts <small>⌨</small></h2>
         <ul class="mainpage_post_list">
-          {{ range first 10 .Data.Pages }}
-            {{ if eq .Type "post"}}
-              <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+          {{ range .Site.Sections }}
+            {{ range first 10 .Pages }}
+              {{ if eq .Type "post"}}
+                <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+              {{ end }}
             {{ end }}
           {{ end }}
         </ul>
@@ -29,9 +31,11 @@
       <h2>Letzte Projekte <small>🤖</small></h2>
       <small>Sorry, es wird noch etwas dauern bis ich mit der Aufbereitung meiner Projekte fertig bin. 😞</small>
       <ul class="mainpage_project_list">
-        {{ range .Data.Pages }}
-          {{ if or (eq .Type "project") }}
-            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+        {{ range .Site.Sections }}
+          {{ range .Pages }}
+            {{ if eq .Type "project"}}
+              <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+            {{ end }}
           {{ end }}
         {{ end }}
       </ul>
