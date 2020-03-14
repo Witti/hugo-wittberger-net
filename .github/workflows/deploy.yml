@@ -23,3 +23,13 @@ jobs:
 
       - name: Build
         run: hugo --minify
+      
+      - name: rsync deploy
+        uses: burnett01/rsync-deployments@4.0
+        with:
+          switches: -avzr --delete
+          path: public/
+          remote_path: /var/www/wittberger.net-gh
+          remote_host: vps.wittberger.net
+          remote_user: webdeploy
+          remote_key: ${{ secrets.DEPLOY_KEY }}
